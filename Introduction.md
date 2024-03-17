@@ -54,12 +54,33 @@ Instead, the class will consist of some presentation and a lot of demos to illus
 
 There is a git lab document that essentially describes the demos so that you can try them out for yourself after the class.
 
---- 
+---
 
+
+## Topics
+
+1. Repositories
+2. Three stage commits
+3. Git under the hood
+4. Understanding blobs, trees, commits and heads
+5. Using aliases
+6. File Operations
+7. Undoing operations
+8. Working with branches
+9. Merging branches
+10. Stashing
+11. Other topics as requested.
 
 
 ---
 
+### Git internals
 
+Previous SCV systems were often developed during the 1980s and 1990s when computing power and storage were limited. This means the delta approach was more efficient for storing large documents with small changes across many versions.
 
+One of the problems with distributed repositories is maintaining the integrity of the commites. With a centralized repository, this is not a problem since items are checked out on a file by file basis.
+
+If the entire repo is checked out, mutilated and then pushed back to the central repo, it has the potential to corrupt and destroy everything.
+
+By using a certificate signing approach, the signature for each commit incorporates the signature of the previous commit so that there is a way to prevent random, spurious or malicious commits.
 
